@@ -1,0 +1,6 @@
+The input of this program is textfile that we want to copy and the button prompts they will use to run the program
+The output of this program is printing out the contents of the textfile we copied
+When the user hits 1 the program will scan the textfile and store it in our Stack ADT
+When the user hits 2 the program will pop out parts of the textfile and will store parts of it in the Student and Address classes respectively
+Then once all of the textfile has been popped out of the Stack ADT we will then print out the information stored in the Student and Address classes
+When the user hits 3 the program will end
