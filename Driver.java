@@ -11,7 +11,7 @@ public class Driver
 {
 	public static void main(String [] args)
 	{	
-		Stack <String> b=new Stack<String>();
+		Stack <String> container=new Stack<String>(10);
 		Scanner s=new Scanner(System.in);
 		int input=0;
 		while(input!=3)
@@ -23,12 +23,16 @@ public class Driver
 			input=s.nextInt();
 			if (input==1)
 			{
-				File f=new File("students.txt");
 				try
 				{
-					Scanner a=new Scanner(f);
-					b.push();	
-
+					File list = new File("students.txt");
+					Scanner a=new Scanner(list);
+					while(a.hasNextLine())
+					{
+						String line= a.nextLine();
+						container.push(line);
+					}
+					a.close();	
 				}
 				catch(FileNotFoundException e)
 				{
