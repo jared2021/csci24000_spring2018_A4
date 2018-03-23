@@ -52,6 +52,7 @@ public class Stack<E>
 		else
 		{
 
+			//Increment the top of the Stack.
 			stack[++top]=dataElement;
 
 			//Push the data element onto the Stack.

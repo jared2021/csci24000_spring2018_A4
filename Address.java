@@ -15,7 +15,7 @@ public class Address
 	public Address()
 	{
 			
-	}	
+	}
 	public void setLine1(String Line1)
 	{
 		Line1=Line1;
