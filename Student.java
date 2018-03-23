@@ -4,50 +4,47 @@
 //received any help on this assignment.
 //
 //jascho
+import java.lang.String;
 public class Student
 {
-	char firstname;
-	char lastname;
-	int id;
-	int gpa;
+	private String firstname;
+	private String lastname;
+	private String id;
+	private String gpa;
 	public Student()
 	{
-	
+		Address myAddress;	
 	}
-	public char getFirstName()
+	public String getFirstName()
 	{
 		return firstname;
 	}
-	public void setFirstName()
+	public void setFirstName(String firstname)
 	{
-		
+		firstname=firstname;
 	}
-	public char getLastName()
+	public String getLastName()
 	{
 		return lastname;
 	}
-	public void setLastName()
+	public void setLastName(String lastname)
 	{
-
+		lastname=lastname;
 	}
-	public void Address()
-	{
-
-	}
-	public int getID()
+	public String getID()
 	{
 		return id;
 	}
-	public void setID()
+	public void setID(String id)
 	{
-
+		id=id;
 	}
-	public int getGPA()
+	public String getGPA()
 	{
 		return gpa;
 	}
-	public void setGPA()
+	public void setGPA(String gpa)
 	{
-
+		gpa=gpa;
 	}
 }

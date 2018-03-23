@@ -4,55 +4,57 @@
 //received any help on this assignment.
 //
 //jascho
+import java.lang.String;
 public class Address
 {
-	char address1;
-	char address2;
-	char city;
-	char state;
-	int zip;
+	private String Line1;
+	private String Line2;
+	private String City;
+	private String State;
+	private String ZipCode;
 	public Address()
 	{
+			
+	}	
+	public void setLine1(String Line1)
+	{
+		Line1=Line1;
+	}
+	public String getLine1()
+	{
+		return Line1;
+	}
+	public void setLine2(String Line2)
+	{
+		Line2=Line2;
+	}
+	public String getLine2()
+	{
+		return Line2;
+	}
+	public void setCity(String City)
+	{
+		City=City;
+	}
+	public String getCity()
+	{
+		return City;
+	}
+	public void setState(String State)
+	{
+		State=State;
+	}
+	public String getState()
+	{
+		return State;
+	}
+	public void setZipCode(String ZipCode)
+	{
+		ZipCode=ZipCode;
+	}
+	public String getZipCode()
+	{
+		return ZipCode;
+	}
 
-	}
-	public char getAddress1()
-	{
-		return address1;
-	}
-	public void setAddress1()
-	{
-
-	}
-	public char getAddress2()
-	{
-		return address2;
-	}
-	public void setAddress2()
-	{
-
-	}
-	public char getCity()
-	{
-		return city;
-	}
-	public void setCity()
-	{
-
-	}
-	public char getState()
-	{
-		return state;
-	}
-	public void setState()
-	{
-
-	}
-	public int getZip()
-	{
-		return zip;
-	}
-	public void setZip()
-	{
-
-	}
 }
