@@ -11,7 +11,7 @@ public class Driver
 {
 	public static void main(String [] args)
 	{	
-		Stack<String> container=new Stack<String>(10);
+		Stack<Student> container=new Stack<Student>(10);
 		Scanner s=new Scanner(System.in);
 		int input=0;
 		while(input!=3)
@@ -30,16 +30,30 @@ public class Driver
 					while(a.hasNextLine())
 					{
 						String line=a.nextLine();
-						container.push(line);
+						container.push(new Student(line));
 					}
 					a.close();
 				}
 				catch(FileNotFoundException e)
 				{
 					e.printStackTrace();
+				}	
+			}
+			else if (input==2)
+			{
+				while(container.isEmpty()==false)
+				{
+					Student a= container.pop();
+					a.getData();
 				}
-
-				
+			}
+			else if (input==3)
+			{
+				System.out.print("Logged out.");
+			}
+			else
+			{
+				System.out.print("I don't know what you want me to do.");
 			}
 		}
 	}

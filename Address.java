@@ -56,5 +56,19 @@ public class Address
 	{
 		return ZipCode;
 	}
+	public String getData()
+	{
+		if(Line2!="")
+		{
+			String s="|%-20s|%-7s|%-15s|%-2s|%-5s|";
+			return String.format(s,Line1,Line2,City,State,ZipCode);
+		
+		}
+		else
+		{
+			String s="|%-20s|%-15s|%-2s|%-5s|";
+			return String.format(s,Line1,City,State,ZipCode);
+		}
 
+	}
 }
