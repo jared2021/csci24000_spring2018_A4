@@ -4,20 +4,28 @@
 //received any help on this assignment.
 //
 //jascho
-public class Stack<T>
+public class Stack<E>
 {
 	//points to the top of the stack
 	private int top;
 	//the size of the stack
 	private int size;
 	//Array to emulate the stack
-	private int [] stack;
-	public Stack()
+	private E [] stack;
+	public Stack(int stackSize)
 	{
-		//Default size ==10
-		size=10;
-		//initialize a new intiger array
-		stack= new int [size];
+		if (size > 0)
+		{
+			size=stackSize;
+		}
+		else
+		{
+			System.out.println("Invalid stack size!");
+			System.out.println("Using default size of 10!");
+			size=10;
+		}
+		//initialize a new generic array instance
+		stack = (E[]) new Object[size];
 		//Initialize the top value
 		top=-1;
 	}
@@ -29,11 +37,11 @@ public class Stack<T>
 	{
 		return top==size;
 	}
-	public int getTop()
+	public E getTop()
 	{
 		return stack[top];
 	}
-	public void push (int dataElement)
+	public void push (E dataElement)
 	{
 		//Check to see if the Stack is full - if not push the element.
 		if(isFull())
@@ -43,34 +51,27 @@ public class Stack<T>
 		}
 		else
 		{
-			//Increment the top of the Stack.
-			top=top+1;
+
+			stack[++top]=dataElement;
 
 			//Push the data element onto the Stack.
 		}
 	}
-	public int pop()
+	public E pop()
 	{
 		//Check to see if the Stack is empty
 		if(!isEmpty())
 		{
 			//Let's store the value of the data element.
-			int value= stack [top];
-
-			//Let's move the pointer by decrementing it.
-			top=top-1;
-
-			//We should return the value
-
-			//Return the popped data element
-			return value;
+			return stack[top--];
 		}
 		else
 		{
 			//We should really throw an exception here...
 			System.out.println("Stack is empty - cannot pop!");
-			return 0;
+			return null;	
 		}
+
 	}
 	public void displayStack()
 	{
