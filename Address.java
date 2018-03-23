@@ -18,7 +18,7 @@ public class Address
 	}
 	public void setLine1(String Line1)
 	{
-		Line1=Line1;
+		this.Line1=Line1;
 	}
 	public String getLine1()
 	{
@@ -26,7 +26,7 @@ public class Address
 	}
 	public void setLine2(String Line2)
 	{
-		Line2=Line2;
+		this.Line2=Line2;
 	}
 	public String getLine2()
 	{
@@ -34,7 +34,7 @@ public class Address
 	}
 	public void setCity(String City)
 	{
-		City=City;
+		this.City=City;
 	}
 	public String getCity()
 	{
@@ -42,7 +42,7 @@ public class Address
 	}
 	public void setState(String State)
 	{
-		State=State;
+		this.State=State;
 	}
 	public String getState()
 	{
@@ -50,7 +50,7 @@ public class Address
 	}
 	public void setZipCode(String ZipCode)
 	{
-		ZipCode=ZipCode;
+		this.ZipCode=ZipCode;
 	}
 	public String getZipCode()
 	{
@@ -58,15 +58,15 @@ public class Address
 	}
 	public String getData()
 	{
-		if(Line2!="")
+		if(!Line2.equals(""))
 		{
-			String s="|%-20s|%-7s|%-15s|%-2s|%-5s|";
+			String s= "%s,%s,%s,%s,%s";
 			return String.format(s,Line1,Line2,City,State,ZipCode);
 		
 		}
 		else
 		{
-			String s="|%-20s|%-15s|%-2s|%-5s|";
+			String s="%s,%s,%s,%s";
 			return String.format(s,Line1,City,State,ZipCode);
 		}
 

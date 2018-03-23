@@ -14,7 +14,7 @@ public class Stack<E>
 	private E [] stack;
 	public Stack(int stackSize)
 	{
-		if (size > 0)
+		if (stackSize > 0)
 		{
 			size=stackSize;
 		}

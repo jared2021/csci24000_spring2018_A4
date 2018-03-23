@@ -44,16 +44,16 @@ public class Driver
 				while(container.isEmpty()==false)
 				{
 					Student a= container.pop();
-					a.getData();
+					System.out.println(a.getData());
 				}
 			}
 			else if (input==3)
 			{
-				System.out.print("Logged out.");
+				System.out.println("Logged out.");
 			}
 			else
 			{
-				System.out.print("I don't know what you want me to do.");
+				System.out.println("I don't know what you want me to do.");
 			}
 		}
 	}

@@ -16,10 +16,8 @@ public class Student
 	private Address myAddress;
 	public Student(String data)
 	{
-		Scanner s= new Scanner(data);
 		myAddress=new Address();
-		String w=s.next();
-		String[] array=w.split(",");
+		String[] array=data.split(",");
 		firstname=array[0];
 		lastname=array[1];
 		myAddress.setLine1(array[2]);
@@ -32,7 +30,7 @@ public class Student
 	}
 	public String getData()
 	{
-		String s="|%-10s|%-10s|%-20s|%-7s|%-15s|%-2s|%-5s|%-6s|%-5s|";
+		String s="Name: %-9s,%-11s Address: %-50s Student ID: %-6s GPA: %-5s";
 		return String.format(s,firstname,lastname,myAddress.getData(),id,gpa);
 	}
 	public void setFirstName(String firstname)
