@@ -14,14 +14,14 @@ public class Driver
 		Stack<Student> container=new Stack<Student>(10);
 		Scanner s=new Scanner(System.in);
 		String input="0";
-		while(!input.equals("3"))
+		while(!input.equals("3")&&!input.equals("three"))
 		{
 			System.out.println("1. Load students (from file)");
 			System.out.println("2. Print stack");
 			System.out.println("3. Exit program");
 			System.out.print("Enter your Selection:");
 			input=s.next();
-			if (input.equals("1"))
+			if (input.equals("1")||input.equals("one"))
 			{
 				try
 				{
@@ -39,7 +39,7 @@ public class Driver
 					e.printStackTrace();
 				}	
 			}
-			else if (input.equals("2"))
+			else if (input.equals("2")||input.equals("two"))
 			{
 				while(container.isEmpty()==false)
 				{
@@ -47,7 +47,7 @@ public class Driver
 					System.out.println(a.getData());
 				}
 			}
-			else if (input.equals("3"))
+			else if (input.equals("3")||input.equals("three"))
 			{
 				System.out.println("Logged out.");
 			}

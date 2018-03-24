@@ -33,37 +33,4 @@ public class Student
 		String s="Name: %-9s,%-11s Address: %-50s Student ID: %-6s GPA: %-5s";
 		return String.format(s,firstname,lastname,myAddress.getData(),id,gpa);
 	}
-	public void setFirstName(String firstname)
-	{
-		firstname=firstname;
-	}
-	public String getFirstName()
-	{
-		return firstname;
-	}
-	public void setLastName(String lastname)
-	{
-		lastname=lastname;
-	}
-	public String getLastName()
-	{
-		return lastname;
-	}
-	public void setID(String id)
-	{
-		id=id;
-	}
-	public String getID()
-	{
-		return id;
-	}
-	public void setGPA(String gpa)
-	{
-		gpa=gpa;
-	}
-	public String getGPA()
-	{
-		return gpa;
-	}
-	
 }
