@@ -7,35 +7,26 @@
 import java.lang.String;
 public class Address
 {
+
+	//attributes of a Address
 	private String Line1;
 	private String Line2;
 	private String City;
 	private String State;
 	private String ZipCode;
-	public Address()
+
+	//a overloaded constructor that will give the Address it's respective attributes
+	public Address(String data)
 	{
-			
+		String[] array=data.split(",");
+		Line1=array[2];
+		Line2=array[3];
+		City=array[4];
+		State=array[5];
+		ZipCode=array[6];
 	}
-	public void setLine1(String Line1)
-	{
-		this.Line1=Line1;
-	}
-	public void setLine2(String Line2)
-	{
-		this.Line2=Line2;
-	}
-	public void setCity(String City)
-	{
-		this.City=City;
-	}
-	public void setState(String State)
-	{
-		this.State=State;
-	}
-	public void setZipCode(String ZipCode)
-	{
-		this.ZipCode=ZipCode;
-	}
+
+	//returns the Address depending on if the Student has a second address or not
 	public String getData()
 	{
 		if(!Line2.equals(""))

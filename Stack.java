@@ -8,10 +8,14 @@ public class Stack<E>
 {
 	//points to the top of the stack
 	private int top;
+
 	//the size of the stack
 	private int size;
+
 	//Array to emulate the stack
 	private E [] stack;
+
+	//determines how big the stack will be
 	public Stack(int stackSize)
 	{
 		if (stackSize > 0)
@@ -29,18 +33,26 @@ public class Stack<E>
 		//Initialize the top value
 		top=-1;
 	}
+
+	//determines when the Stack is empty
 	public boolean isEmpty()
 	{
 		return top==-1;
 	}
+
+	//determines when the Stack is full
 	public boolean isFull()
 	{
 		return top==size;
 	}
+
+	//gives the top variable for the Stack
 	public E getTop()
 	{
 		return stack[top];
 	}
+
+	//allows something to be put on the top of the Stack as long as it is the same type as the Stack
 	public void push (E dataElement)
 	{
 		//Check to see if the Stack is full - if not push the element.
@@ -58,6 +70,8 @@ public class Stack<E>
 			//Push the data element onto the Stack.
 		}
 	}
+
+	//Takes the top item off the stack
 	public E pop()
 	{
 		//Check to see if the Stack is empty
@@ -74,6 +88,8 @@ public class Stack<E>
 		}
 
 	}
+
+	//prints out everything that is on the Stack
 	public void displayStack()
 	{
 		//Loop through our Stack array
